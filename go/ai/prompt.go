@@ -980,7 +980,7 @@ func DefineDataPrompt[In, Out any](r api.Registry, name string, opts ...PromptOp
 
 // LookupDataPrompt looks up a prompt by name and wraps it with type information.
 // This is useful for wrapping prompts loaded from .prompt files with strong types.
-// It returns nil if the prompt was not defined.
+// It returns nil if the prompt was not found.
 func LookupDataPrompt[In, Out any](r api.Registry, name string) *DataPrompt[In, Out] {
 	return AsDataPrompt[In, Out](LookupPrompt(r, name))
 }
